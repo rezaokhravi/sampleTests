@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Login Page</title>
+        <!-- <link rel="stylesheet" href="assets/css/ghpages-materialize.css"> -->
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+    <body>
+        <div class="content-center">
+            <div class="card">
+                <div class="login">
+                    <h1>ورود</h1>
+                    <p>به پنل کاربری خوش آمدید</p>
+                    <form action="post"  autocomplete="off">
+                        
+                        <div class="form">
+
+                            <input type="text" class="" name="userName" id="userName" required oninvalid='this.setCustomValidity("نام کاربری اجباری می باشد.")' oninput='this.setCustomValidity("")' >
+                            <label for="userName" class="label-name">
+                                <i class="fa fa-user fa-lg" ></i>
+                                <span class="content-name">نام کاربری</span>
+                            </label>
+                        </div>
+                        
+                        <div class="form">
+                            
+                            <input type="password" class="" name="password" id="password" required oninvalid='this.setCustomValidity("کلمه عبور اجباری می باشد.")' oninput='this.setCustomValidity("")'>
+                            
+                            <label for="password" class="label-name">
+                                <span class="content-name">کلمه عبور</span>
+                                <i id="eye" class="fa fa-eye fa-lg"></i>
+                            </label>
+                        </div>
+                        
+                        <div class="row">
+                            <button class="btn-md btn-login" type="submit">ورود</button>
+                        </div>
+
+                        <div class="row">
+                            <a href="" >کلمه عبور را فراموش کرده ام !</a>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="register">
+                    <h2>پنل مدیریت فروشگاه</h2>
+                    <hr>
+                    <p>پنل مدیریت فروشگاه</p>
+                    <hr>
+                    <p>پنل مدیریت فروشگاه</p>
+                    <hr>
+                    <p>پنل مدیریت فروشگاه</p>
+                    <hr>
+                    <p>پنل مدیریت فروشگاه</p>
+                    <hr>
+                    <p>پنل مدیریت فروشگاه</p>
+
+                    <button class="btn">ثبت نام</button>
+                </div>
+                
+            </div>
+        </div>
+    <script src="assets/js/scripts.js"></script>
+    </body>
+</html>

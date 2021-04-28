@@ -1,0 +1,207 @@
+.content-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card {
+    display: flex;
+    background-color: $card-backColor;
+    box-shadow: $card-boxShadow;
+}
+
+.login>p {
+    color: $card-color;
+}
+
+.register>hr {
+    color: transparentize($register-backColor, $amount: .5);
+}
+
+.btn {
+    border: 0;
+    padding: 5px 30px;
+    width: auto;
+    align-self: center;
+}
+
+.register {
+    display: flex;
+    flex-direction: column;
+    color: $card-backColor;
+    justify-content: center;
+    text-align: center;
+}
+
+.register>p {
+    flex-grow: 1;
+    line-height: 44px;
+}
+
+.register>.btn {
+    color: $card-backColor;
+    transition: all linear .3s;
+    background-color: darken($register-backColor, $amount: 10);
+    border: 2px solid lighten($register-backColor, $amount: 5);
+}
+
+.register>.btn:hover {
+    background-color: darken($register-backColor, $amount: 25);
+    border: 2px solid lighten($register-backColor, $amount: 11);
+}
+
+
+.form {
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.form input {
+    width: 90%;
+    height: 100%;
+    padding-top: 20px;
+    border: none;
+    outline: none;
+    float: left;
+
+    &:required,
+    :invalid {
+        box-shadow: none;
+    }
+}
+
+.form label {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    right: 0%;
+    // pointer-events: none;
+    border-bottom: 1px solid black;
+    color: $card-color;
+}
+
+.form label::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    bottom: -1;
+    border-bottom: 3px solid $register-backColor;
+    transform: translateX(-100%);
+    transition: all .3s ease;
+}
+
+.content-name,
+.label-name i {
+    position: absolute;
+    bottom: 5px;
+    transition: all .3s ease;
+}
+
+.label-name i {
+    right: 0;
+
+}
+
+.content-name {
+    right: 30px;
+}
+
+#eye {
+    z-index: 5;
+    cursor: pointer;
+    color: $card-color;
+
+    &:hover {
+        color: $bg-color;
+    }
+}
+
+.form input:focus+.label-name .content-name,
+.form input:valid+.label-name .content-name {
+    transform: translateY(-100%);
+    color: $register-backColor;
+}
+
+.form input:focus+.label-name::after,
+.form input:valid+.label-name::after {
+    transform: translateX(0%);
+}
+
+
+.row {
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+button {
+    margin: 20px 5px;
+    padding: 10px;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid $register-backColor;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all .1s linear ;
+}
+
+.btn-md {
+    flex-basis: 200px;
+    font-size: medium;
+}
+
+.btn-login::after{
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    background-color: $register-backColor;
+    content: " ";
+    left: 0;
+    top: 0;
+    border-bottom-left-radius: 70%;
+    border-bottom-right-radius: 70%;
+    transition: all .5s linear ;
+    z-index: -1;
+}
+
+.btn-login:hover::after{
+    height: 180%;
+}
+
+.btn-login:hover{
+    color: $card-backColor;
+}
+
+.row a {
+    color: $register-backColor;
+    text-decoration: none;
+}
+.row a:hover{
+    color: darken($register-backColor, $amount: 25);
+}
+@media only screen and (min-width: 601px) {
+
+    .login,
+    .register {
+        height: 400px;
+        padding: 30px;
+        width: 300px;
+    }
+
+    h1{
+        margin: 5px auto;
+    }
+    .register {
+        background-color: $register-backColor;
+    }
+
+}

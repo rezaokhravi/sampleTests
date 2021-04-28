@@ -1,0 +1,17 @@
+@font-face {
+    font-family: IranSans;
+    src: url("../fonts/IRANSans-web.eot");
+    src: url("../fonts/IRANSans-web.ttf") format("ttf"), url("../fonts/IRANSans-web.woff") format("woff"), url("../fonts/IRANSans-web.woff2") format("woff2");
+    font-weight: normal;
+}
+
+$bg-backColor : #eeeeee;
+$bg-color : #000000;
+$bg-fontSize :14px;
+$bg-fontName : IranSans,
+tahoma;
+$card-color:#979797;
+$card-boxShadow:#979797 0px 0px 2px;
+
+$register-backColor : #77a0eb;
+$card-backColor : white;
